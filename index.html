@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- META -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="robots" content="noodp" />
+    <title>Home</title>
+    <!-- CSS RESET -->
+    <link rel="stylesheet" type="text/css" href="reset.css" media="all" />
+
+    <!-- TARGET SMARTPHONES -->
+    <link rel="stylesheet" type="text/css" href=""
+        media="only screen and (min-device-width: 320px) and (max-device-width: 480px)" />
+    <link rel="stylesheet" type="text/css" href="" media="only screen and (min-width: 321px)" />
+    <link rel="stylesheet" type="text/css" href="" media="only screen and (max-width: 320px)" />
+
+    <!-- IPADS -->
+    <link rel="stylesheet" type="text/css" href=""
+        media="only screen and (min-device-width: 768px) and (max-device-width: 1024px)" />
+    <link rel="stylesheet" type="text/css" href=""
+        media="only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape)" />
+    <link rel="stylesheet" type="text/css" href=""
+        media="only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait)" />
+
+    <!-- DESKTOP & LAPTOPS -->
+    <link rel="stylesheet" type="text/css" href="" media="only screen and (min-width: 1224px)" />
+
+    <!-- LARGE SCREEN -->
+    <link rel="stylesheet" type="text/css" href="" media="only screen and (min-width: 1824px)" />
+
+    <link rel="stylesheet" type="text/css" href=""
+        media="only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5)" />
+
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
+    <!-- Used for element selection in uploading and sending to Google Sheets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div id="row1" class="row" align='center'>
+        <!-- Dividing the page into three rows -->
+        <div class="column">
+            <img align="center" id="logo" src="assets/onyxLogo.webp" alt="Onyx Apartments Logo">
+            <!-- Logo -->
+        </div><br><br>
+        <div class="column">
+            <header><span id='contact'>Contact Info: </span><br>Email: <a
+                    href=" mailto:onyx@apartmentlife.org">onyx@apartmentlife.org</a></header>
+            <!-- Contact info w/ hyperlink to email -->
+        </div>
+        <br><br>
+    </div>
+    <div id="row2" class='row' align="center">
+        <div class="column">
+            <form
+                action="https://script.google.com/macros/s/AKfycbzoTcWYv-KHTkJ1Y-mhjXNSI7K_dJCm8drDe3DBUCQ1RgZU_1VN/exec"
+                id="form" name="submit-to-google-sheet" method="post">
+                <!-- Link to Google Apps Script which enables me to interact with GSuite -->
+                <label>Photo Submission Form</label><br>
+                <input id='email' name="email" type="email" placeholder="Email" required><br>
+                <input id='firstName' name="firstName" type="text" placeholder="First Name"><br>
+                <input id='lastName' name="lastName" type="text" placeholder="Last Name"><br>
+                <div id="data"></div>
+                <!--Used to select the data in the upload process-->
+                <input name="file" id="uploadfile" type="file"><br>
+                <input id="submit" type="submit">
+            </form>
+            <!-- Form for photo submissions -->
+        </div>
+        <div class='column'>
+
+            <p id=text>Use this form to submit your picture and tell us a short story of your submission. You will be
+                entered
+                into a raffle for a prize!</p>
+            <!-- Paragraph of text next to form -->
+        </div>
+
+
+
+    </div>
+
+    <div id="bottom" class="bottom">
+        <!-- Bottom row -->
+        <div class="container">
+
+            <img id="fam" src="assets/IMG_5281.JPG">
+        </div>
+    </div>
+
+    <script src='index.js'></script>
+    <!-- Access to some clrForm()  -->
+    <script src='uploadFile.js'></script>
+    <!-- Script for selecting photo and sending it to Google App Scripts which tnen uploads the image to Google Drive -->
+    <script src="sendForm.js"></script>
+    <!-- Script for selecting data and sending forms Google App Scripts which then send 
+        to Google Sheets -->
+
+
+</body>
+
+
+</html>
