@@ -1,20 +1,14 @@
-var PORT = process.env.PORT || 5500;
-var express = require('express');
-var app = express();
+const mongoose = require("mongoose");
+const express = require("express");
 
-var http = require('http');
-var server = http.Server(app);
+const app = express();
 
-app.use(express.static('client'));
+mongoose
+    .connect("mongodb://localhost:27017/myapp", { useNewParser: true })
+    .then(() => console.log("Connected to MongoDB..."))
+    .catch(err => console.error("Could not connect to MongoDB..."));
 
-server.listen(PORT, function () {
-    console.log('Chat server running');
-});
+app.use(express.json());
 
-var io = require('socket.io')(server);
-
-io.on('connection', function (socket) {
-    socket.on('message', function (msg) {
-        io.emit('message', msg);
-    });
-});
+const port = process.env.PORT || 3000;
+app.listen(port, () => console.log(`Listening on port ${port}...`));
