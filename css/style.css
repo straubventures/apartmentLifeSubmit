@@ -5,7 +5,8 @@
     
 }
 header{
-    font-size: 70%;
+    
+
 }
 #submit {
     background: black;
@@ -23,6 +24,13 @@ header{
 span#contact {
     font-weight: bold;
     
+    
+}
+
+div#contactFull { 
+  position: relative;
+    text-align: center;
+    vertical-align: 200%;
 }
 
 .row:after {
@@ -64,11 +72,15 @@ label {
   }
 
   header {
-    margin: 20px
+    position: relative;
+    padding: 15%;
+    font-size: 70%;
   }
 
   div#row1.row {
     background-color:lightgray;
+    position: relative;
+    text-align: center;
   }
 .container {
   padding-top: 1%;
@@ -100,6 +112,6 @@ div#row2 {
 #logo {
   position: relative;
   width: 60%;
-  height: 460%;
+  height: 60%;
 }
 
