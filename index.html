@@ -43,7 +43,7 @@
     <div id="row1" class="row" align='center'>
         <!-- Dividing the page into three rows -->
         <div class="column">
-            <img align="center" id="logo" src="assets/onyxLogo.webp" alt="Onyx Apartments Logo">
+            <img align="center" id="logo" src="assets/The Onyx2.png" alt="Onyx Apartments Logo">
             <!-- Logo -->
         </div><br><br>
         <div class="column">
@@ -55,9 +55,7 @@
     </div>
     <div id="row2" class='row' align="center">
         <div class="column">
-            <form
-                action="https://script.google.com/macros/s/AKfycbzoTcWYv-KHTkJ1Y-mhjXNSI7K_dJCm8drDe3DBUCQ1RgZU_1VN/exec"
-                id="form" name="submit-to-google-sheet" method="post">
+            <form id="form" name="submit-to-google-sheet" method="post">
                 <!-- Link to Google Apps Script which enables me to interact with GSuite -->
                 <label>Photo Submission Form</label><br>
                 <input id='email' name="email" type="email" placeholder="Email" required><br>
@@ -93,14 +91,17 @@
 
     <script src='clrForm.js'></script>
     <!-- Access to some clrForm()  -->
-    <script src='uploadFile.js'></script>
-    <!-- Script for selecting photo and sending it to Google App Scripts which tnen uploads the image to Google Drive -->
     <script src="sendForm.js"></script>
     <!-- Script for selecting data and sending forms Google App Scripts which then send 
         to Google Sheets -->
+    <script src='uploadFile.js'></script>
+    <!-- Script for selecting photo and sending it to Google App Scripts which tnen uploads the image to Google Drive -->
+
 
 
 </body>
 
 
 </html>
+
+<!-- https://script.google.com/macros/s/AKfycbzoTcWYv-KHTkJ1Y-mhjXNSI7K_dJCm8drDe3DBUCQ1RgZU_1VN/exec -->

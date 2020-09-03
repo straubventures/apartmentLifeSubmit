@@ -43,7 +43,7 @@ span#contact {
   }
 
   img {
-    background-color: gray;
+    background-color: lightgray;
   }
 
   br {
@@ -68,7 +68,7 @@ label {
   }
 
   div#row1.row {
-    background-color:gray;
+    background-color:lightgray;
   }
 .container {
   padding-top: 1%;
@@ -93,12 +93,13 @@ label {
     height: 100%;
   }
 
-span#pic {
-    position: relative;
-}
-
 div#row2 {
     background-color:white;
 }
 
+#logo {
+  position: relative;
+  width: 20%;
+  height: 20%;
+}
 
