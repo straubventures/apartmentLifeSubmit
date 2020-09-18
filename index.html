@@ -3,6 +3,9 @@
 
 <head>
     <!-- META -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -40,65 +43,138 @@
 </head>
 
 <body>
-    <div id="row1" class="row" align='center'>
-        <!-- Dividing the page into three rows -->
-        <div class="column">
-            <img align="center" id="logo" src="assets/The Onyx2.png" alt="Onyx Apartments Logo">
-            <!-- Logo -->
-        </div>
-        <div class="column">
-            <header><span id='contact'>Contact Info: </span><br>Email: <a
-                    href=" mailto:onyx@apartmentlife.org">onyx@apartmentlife.org</a></header>
-            <!-- Contact info w/ hyperlink to email -->
-        </div>
-    </div>
-    <div id="row2" class='row' align="center">
-        <div class="column">
-            <form id="form" name="submit-to-google-sheet" method="post">
-                <!-- Link to Google Apps Script which enables me to interact with GSuite -->
-                <label>Photo Submission Form</label><br>
-                <input id='email' name="email" type="email" placeholder="Email" required><br>
-                <input id='firstName' name="firstName" type="text" placeholder="First Name"><br>
-                <input id='lastName' name="lastName" type="text" placeholder="Last Name"><br>
-                <div id="data"></div>
-                <!--Used to select the data in the upload process-->
-                <input name="file" id="uploadfile" type="file"><br>
-                <input id="submit" type="submit" value="Submit this form">
-            </form>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+                <a class="navbar-brand" href="#">The Onyx</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mr-auto">
+                        <!-- <li class="nav-item active">
+                            <a class="nav-link" href="./home.html">Home <span class="sr-only">(current)</span></a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="./index.html">Photo Submission Contest</a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </nav>
+        </header>
+
+
+
+        <!--FORM-->
+
+        <div id="row2" class='row' align="center">
+            <div class="column">
+                <br>
+
+                <h2 class='featurette-heading'>Photo Submission Form</h2><br>
+
+                <p id=text class='lead'>Use this form to submit your picture and tell us a short story of your
+                    submission.
+                    You will be
+                    entered
+                    into a raffle for a prize!</p>
+                <hr class='featurette-divider'>
+                <h2 class='featurette-heading'>Personal Information</h2>
+                <form id="form" name="submit-to-google-sheet" method="post">
+                    <div class='form-group'>
+                        <!-- Link to Google Apps Script which enables me to interact with GSuite -->
+
+                        <input id='firstName' name="firstName" class='form-control' type="text"
+                            placeholder="First Name"><br>
+                        <input id='lastName' name="lastName" class='form-control' type="text" placeholder="Last Name">
+
+
+                        <br>
+                        <input id='email' name="email" class='form-control' type="email" placeholder="Email"
+                            required><br>
+
+                        <hr class='featurette-divider'>
+                        <div id="data"></div>
+
+                        <h2 class='featurette-heading'>Photo Submission</h2><br>
+                        <!--Used to select the data in the upload process-->
+
+                        <input name="file" id="uploadfile" type="file"><br><br>
+
+                        <hr class='featurette-divider'>
+
+                        <h2 class='featurette-heading'>Permission</h2><br>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                            <label class="form-check-label" for="defaultCheck1">
+                                I agree to allow The Onyx to use these images in their marketing materials. (optional)
+                            </label>
+                        </div>
+
+                        <hr class='featurette-divider'>
+
+                        <input id="submit" type="submit" class="btn btn-primary" value="Submit this form" />
+                    </div>
+                </form>
+                <hr class='featurette-divider'>
+
+            </div>
+
             <!-- Form for photo submissions -->
         </div>
-        <div class='column'>
 
-            <p id=text>Use this form to submit your picture and tell us a short story of your submission. You will be
-                entered
-                into a raffle for a prize!</p>
-            <!-- Paragraph of text next to form -->
+        <div id="row1" class="row" align='center'>
+
+            <!-- Dividing the page into three rows -->
+            <div class="column">
+                <img align="center" id="logo" src="assets/The Onyx2.png" alt="Onyx Apartments Logo">
+                <!-- Logo -->
+            </div>
+            <div class="column" align="center">
+                <header><span id='contact'>Contact Info: </span><br>Email: <a
+                        href=" mailto:onyx@apartmentlife.org">onyx@apartmentlife.org</a><br>
+                    Phone: (833) 217-7326</header>
+                <!-- Contact info w/ hyperlink to email -->
+            </div>
+
         </div>
 
 
+        <!-- Paragraph of text next to form -->
 
-    </div>
 
-    <div id="bottom" class="bottom">
-        <!-- Bottom row -->
-        <div class="container">
 
-            <img id="fam" src="assets/IMG_5281.JPG">
+
         </div>
-    </div>
 
 
-    <script src='clrForm.js'></script>
-    <!-- Access to some clrForm()  -->
-    <script src="sendForm.js"></script>
-    <!-- Script for selecting data and sending forms Google App Scripts which then send 
+        <hidden>
+            <script src='clrForm.js'></script>
+            <!-- Access to some clrForm()  -->
+            <script src="sendForm.js"></script>
+            <!-- Script for selecting data and sending forms Google App Scripts which then send 
         to Google Sheets -->
-    <script src='uploadFile.js'></script>
-    <!-- Script for selecting photo and sending it to Google App Scripts which tnen uploads the image to Google Drive -->
+            <script src='uploadFile.js'></script>
+            <!-- Script for selecting photo and sending it to Google App Scripts which tnen uploads the image to Google Drive -->
 
 
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+                integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+                crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+                integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+                crossorigin="anonymous"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+                integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+                crossorigin="anonymous"></script>
+            <!--Bootstrap links-->
+        </hidden>
 
-</body>
+    </body>
 
 
 </html>

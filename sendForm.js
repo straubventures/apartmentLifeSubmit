@@ -4,18 +4,24 @@ const scriptURL2 = 'https://script.google.com/macros/s/AKfycbzoTcWYv-KHTkJ1Y-mhj
 const form = document.forms['submit-to-google-sheet']
 
 $('#form').on("submit", e => {
+
     e.preventDefault()
-    document.getElementById('submit').value = "Loading"
+    document.getElementById('submit').value = "Please Wait..."
     // BUG FOUND
     console.log("working")
+
+    //Send to doPost spreadsheet
     fetch(scriptURL, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
         .then(response => console.log('Success!', response))
         .then(response => document.getElementById('submit').value = "Complete!")
         .catch(error => console.error('Error!', error.message));
+
+    //Send picture to Google Drive
     fetch(scriptURL2, { method: 'POST', body: new FormData(form), mode: 'no-cors' })
         .then(response => console.log('Success!', response))
         .then(response => document.getElementById('submit').value = "Complete!")
         .then(response => clrForm())
+        .then(response => window.location.href = 'https://www.nationalgoodneighborday.com/')
         .catch(error => console.error('Error!', error.message))
 
 
